@@ -1,7 +1,7 @@
 '''
 Author: CYLlinmaian
 Date: 2022-07-10 12:07:46
-LastEditTime: 2022-07-10 12:14:16
+LastEditTime: 2022-07-25 11:10:09
 LastEditors: CYLlinmaian
 Description: 
 FilePath: \Big Job\WordCloud.py
@@ -25,7 +25,7 @@ txt = f.read()
 f.close
 txt = trans_ch(txt)
 mask = np.array(Image.open("abouty.png"))  # 将你的背景图片
-wordcloud = WordCloud(background_color="white",  #设置词云背景
+wordcloud = WordCloud(background_color="white",  # 设置词云背景
                       width=800,
                       height=600,
                       max_words=200,
@@ -33,6 +33,6 @@ wordcloud = WordCloud(background_color="white",  #设置词云背景
                       mask=mask,
                       contour_width=4,
                       contour_color='steelblue',
-                      font_path="STLITI.ttf"    #指定字体
+                      font_path="STLITI.ttf"  # 指定字体
                       ).generate(txt)
 wordcloud.to_file('abouty.png')
